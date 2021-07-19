@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ghost.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @ghost.age %>
+</p>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @ghost.volume %>
+</p>
+
+<%= link_to 'Edit', edit_ghost_path(@ghost) %> |
+<%= link_to 'Back', ghosts_path %>

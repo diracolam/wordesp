@@ -1,0 +1,32 @@
+<%= form_with(model: ghost) do |form| %>
+  <% if ghost.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ghost.errors.count, "error") %> prohibited this ghost from being saved:</h2>
+
+      <ul>
+        <% ghost.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :volume %>
+    <%= form.number_field :volume %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
