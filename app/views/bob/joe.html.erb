@@ -1,5 +1,12 @@
 <div class="bgimg">
   <div class="topleft">
+  .
+  <% if user_signed_in? %>
+    <%= current_user.email %> |
+    <%= link_to "Log out", destroy_user_session_path, :method=>'delete'%>
+  <% else %>
+    <%= link_to "login", new_user_session_path %>
+  <% end %>
   </div>
   <div class="middle">
     <h1>COMING SOON</h1>
